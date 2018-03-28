@@ -1,0 +1,18 @@
+<view class='content'>
+  <text class='tip' >请输入地级城市,例如:南京 \n</text>
+  <view class='search'>
+  <!-- 当键盘输入时，触发bindinput事件，event.detail = {value, cursor}，处理函数可以直接 return 一个字符串，将替换输入框的内容。 -->
+    <input class='input' bindinput='bindKeyInput' placeholder ='请输入地级城市名'> </input>
+    <!-- bindtap用于绑定事件-->
+    <button bindtap='search' >查询</button>
+  </view> 
+    <!-- 引入模板 -->
+  <import src="../template/template" />
+  <!-- 先不显示,等查询完毕后再显示
+  wx:if=后面要有单引号 -->
+  <view wx:if='{{show}}' class='future'>
+    <block wx:for="{{future}}">
+      <template is="futureItem" data="{{item}}" />
+    </block>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "知天易",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "当前城市",
+        "iconPath": "imgs/city1.png",
+        "selectedIconPath": "imgs/city3.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "其他城市",
+        "iconPath": "imgs/city2.png",
+        "selectedIconPath": "imgs/city4.png"
+      }
+    ]
+  }
+
+}

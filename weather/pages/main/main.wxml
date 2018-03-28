@@ -1,0 +1,29 @@
+
+<!--pages/main/main.wxml-->
+<view class='content'>
+  <view class='today'>
+    <view class='info'>
+      <view class='weather'>
+        {{weather}}
+      </view>
+      <view class='temp'>
+        {{temperature}}
+      </view>
+      <view class='todayInfo'>
+        <!-- 要用<text>包起来才能实现利用"/n"来换行的效果 -->
+        <text>{{todayInfo}}</text>
+      </view>
+      <view class='city'>
+        {{city}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 引入模板 -->
+  <import src="../template/template" />
+  <view class='future'>
+    <block wx:for="{{future}}">
+      <template is="futureItem" data="{{item}}" />
+    </block>
+  </view>
+</view>

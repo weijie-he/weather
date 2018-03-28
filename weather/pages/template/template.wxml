@@ -1,0 +1,9 @@
+<template name="futureItem">
+  <view class="future-item" >
+    <view> {{item.text_day}} </view>
+    <view class='itemView'><text> {{item.high}}~{{item.low}}℃ </text></view>
+    <view class='itemView'> 风向: {{item.wind_direction}} </view>
+    <view class='itemView'> <text> 风力: {{item.wind_scale}} 级 </text></view>
+    <view class='itemView'> {{item.date}} </view>
+  </view>
+</template>
